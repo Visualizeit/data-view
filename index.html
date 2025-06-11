@@ -50,8 +50,12 @@
         >
       </h1>
       <div class="weather">
-        <img src="picture/weather.png" /><span>多云转小雨</span
-        ><span>2017-12-30</span>
+        <img src="picture/weather.png" /><span id="current-date"></span>
+        <script>
+          document.getElementById("current-date").textContent = new Date()
+            .toISOString()
+            .split("T")[0];
+        </script>
       </div>
     </div>
     <div class="mainbox">
