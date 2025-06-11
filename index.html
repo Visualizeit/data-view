@@ -58,21 +58,21 @@
       <ul class="clearfix">
         <li>
           <div class="boxall" style="height: 2.7rem">
-            <div class="alltitle">生意参谋</div>
+            <div class="alltitle">统计</div>
 
             <div class="sycm">
               <ul class="clearfix">
                 <li>
                   <h2>1824</h2>
-                  <span>今日销售额</span>
+                  <span>消费会员统计</span>
                 </li>
                 <li>
                   <h2>1920</h2>
-                  <span>昨日销售额</span>
+                  <span>今日新增消费会员</span>
                 </li>
                 <li>
                   <h2>19%</h2>
-                  <span>环比增长</span>
+                  <span>昨日新增消费会员</span>
                 </li>
               </ul>
               <div
@@ -81,21 +81,59 @@
               <ul class="clearfix">
                 <li>
                   <h2>1824</h2>
-                  <span>今日销售额</span>
+                  <span>设备使用总次数</span>
                 </li>
                 <li>
                   <h2>1920</h2>
-                  <span>昨日销售额</span>
+                  <span>今天使用次数</span>
                 </li>
                 <li>
                   <h2>19%</h2>
-                  <span>环比增长</span>
+                  <span>昨日使用次数</span>
                 </li>
               </ul>
             </div>
             <div class="boxfoot"></div>
           </div>
-          <div class="boxall" style="height: 2.65rem">
+          <div class="boxall" style="height: 2.7rem">
+            <div class="alltitle">统计</div>
+
+            <div class="sycm">
+              <ul class="clearfix">
+                <li>
+                  <h2>1824</h2>
+                  <span>今日订单数</span>
+                </li>
+                <li>
+                  <h2>1920</h2>
+                  <span>昨日订单数</span>
+                </li>
+                <li>
+                  <h2>19%</h2>
+                  <span>当月订单数</span>
+                </li>
+              </ul>
+              <div
+                style="border-bottom: 1px solid rgba(255, 255, 255, 0.1)"
+              ></div>
+              <ul class="clearfix">
+                <li>
+                  <h2>1824</h2>
+                  <span>今日订单金额</span>
+                </li>
+                <li>
+                  <h2>1920</h2>
+                  <span>昨日订金额</span>
+                </li>
+                <li>
+                  <h2>19%</h2>
+                  <span>当月订金额</span>
+                </li>
+              </ul>
+            </div>
+            <div class="boxfoot"></div>
+          </div>
+          <!-- <div class="boxall" style="height: 2.65rem">
             <div class="alltitle">消费占比</div>
             <div class="sy" id="echarts1"></div>
             <div class="sy" id="echarts2"></div>
@@ -106,20 +144,20 @@
             <div class="alltitle">行业区分比例</div>
             <div id="echarts4" style="height: 2.2rem; width: 100%"></div>
             <div class="boxfoot"></div>
-          </div>
+          </div> -->
         </li>
         <li>
           <div class="bar">
             <div class="barbox">
               <ul class="clearfix">
                 <li class="pulll_left counter">12581189</li>
-                <li class="pulll_left counter">3912410</li>
+                <li id="order_count" class="pulll_left counter">3912410</li>
               </ul>
             </div>
             <div class="barbox2">
               <ul class="clearfix">
                 <li class="pulll_left">消费总金额</li>
-                <li class="pulll_left">消费总笔数</li>
+                <li class="pulll_left">消费订单总数</li>
               </ul>
             </div>
           </div>
@@ -132,21 +170,21 @@
         </li>
         <li>
           <div class="boxall" style="height: 5.2rem">
-            <div class="alltitle">新增会员信息</div>
+            <div class="alltitle">新增加盟商信息</div>
             <div class="tabs">
               <ul class="clearfix">
                 <li>
                   <a
                     class="active"
                     href="https://gitee.com/iGaoWei/big-data-view"
-                    >7天</a
+                    >今日</a
                   >
                 </li>
                 <li>
-                  <a href="https://gitee.com/iGaoWei/big-data-view">15天</a>
+                  <a href="https://gitee.com/iGaoWei/big-data-view">昨日</a>
                 </li>
                 <li>
-                  <a href="https://gitee.com/iGaoWei/big-data-view">30天</a>
+                  <a href="https://gitee.com/iGaoWei/big-data-view">当月</a>
                 </li>
               </ul>
             </div>
@@ -156,7 +194,7 @@
               <div class="sy" id="echarts8"></div>
             </div>
             <div class="addnew">
-              <div class="tit02"><span>今日新增会员列表</span></div>
+              <div class="tit02"><span>今日新增加盟商列表</span></div>
               <div class="adduser">
                 <ul class="clearfix">
                   <li class="clearfix">
@@ -189,7 +227,7 @@
             <div class="boxfoot"></div>
           </div>
           <div class="boxall" style="height: 3.4rem">
-            <div class="alltitle">实时消费记录</div>
+            <div class="alltitle">实时订单数据</div>
             <div class="wrap">
               <ul>
                 <li>
@@ -222,19 +260,21 @@
     <script type="text/javascript" src="js/echarts.min.js"></script>
     <script type="text/javascript" src="js/china.js"></script>
     <script type="text/javascript" src="js/area_echarts.js"></script>
+    <script type="text/javascript" src="js/mockData.js"></script>
+    <script type="text/javascript" src="js/render.js"></script>
     <script type="text/javascript">
       $(document).ready(function () {
-        myChart1.resize();
-        myChart2.resize();
-        myChart3.resize();
+        // myChart1.resize();
+        // myChart2.resize();
+        // myChart3.resize();
         myChart6.resize();
         myChart7.resize();
         myChart8.resize();
       });
       window.addEventListener("resize", function () {
-        myChart1.resize();
-        myChart2.resize();
-        myChart3.resize();
+        // myChart1.resize();
+        // myChart2.resize();
+        // myChart3.resize();
         myChart6.resize();
         myChart7.resize();
         myChart8.resize();
@@ -413,7 +453,7 @@
         myChart8.setOption(option8);
       }, 500);
     </script>
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
       var myChart1 = echarts.init(document.getElementById("echarts1"));
       var v1 = 298; //男消费
       var v2 = 523; //女消费
@@ -712,7 +752,7 @@
       window.addEventListener("resize", function () {
         myChart.resize();
       });
-    </script>
+    </script> -->
     <!--大屏-->
     <script type="text/javascript" src="js/jquery.waypoints.min.js"></script>
     <script type="text/javascript" src="js/jquery.countup.min.js"></script>
