@@ -18,6 +18,18 @@ const renderChart = ({ data }) => {
 
   // 会员统计
   $("#member_count").text(data.member_count);
+
+  $("#order_list").html(
+    data.order_data
+      .map(
+        (order) => `
+    <li>
+      <p>${order.mobile} ${order.goods_title} ¥${order.price}元</p>
+    </li>
+  `
+      )
+      .join()
+  );
 };
 
 const initializeCharts = () => {
