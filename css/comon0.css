@@ -75,13 +75,6 @@ a:hover{ color:#06c; text-decoration: none!important}
 .barbox li{ font-size: .6rem; color: #ffeb7b; padding: .05rem 0;  font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif"; font-weight: bold;}
 .barbox2 li{ font-size: .19rem; color: #637c9f; padding-top: .1rem;}
 
-.map{  position:relative; height: 7.2rem; z-index: 9;}
-.map4{ width: 200%; height:7rem;  position: relative; left: -50%; top: 4%; margin-top: .2rem; z-index: 5;}
-.map1,.map2,.map3{ position:absolute;}
-.map1{ width:6.43rem; z-index: 2;top:.45rem; left: .4rem;  animation: myfirst2 15s infinite linear;}
-.map2{ width:5.66rem; top:.85rem; left: .77rem; z-index: 3; opacity: 0.2; animation: myfirst 10s infinite linear;}
-.map3{ width:5.18rem; top:1.07rem; left: 1.13rem; z-index: 1;}
-
 #echarts1,#echarts2,#echarts3,#echarts6,#echarts7,#echarts8{ position:relative;}
 #echarts1:before,
 #echarts2:before,
@@ -146,16 +139,4 @@ a:hover{ color:#06c; text-decoration: none!important}
 
 .sycm li h2{ font-size:.3rem; color: #c5ccff;}
 .sycm li span{ font-size:.18rem; color: #fff; opacity: .5;}
-
-@keyframes myfirst2
-{
-from {transform: rotate(0deg);}
-to {transform: rotate(359deg);}
-}
-
-@keyframes myfirst
-{
-from {transform: rotate(0deg);}
-to {transform: rotate(-359deg);}
-}
 
