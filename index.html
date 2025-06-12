@@ -170,7 +170,23 @@
         <li>
           <div class="boxall" style="height: 5.2rem">
             <div class="alltitle">新增加盟商信息</div>
-            <div class="tabs">
+            <div class="sycm">
+              <ul class="clearfix">
+                <li>
+                  <h2 id="today_franchisee">0</h2>
+                  <span>今日加盟商会员</span>
+                </li>
+                <li>
+                  <h2 id="yesterday_franchisee">0</h2>
+                  <span>昨日加盟商会员 </span>
+                </li>
+                <li>
+                  <h2 id="month_franchisee">0</h2>
+                  <span>当月加盟商会员 </span>
+                </li>
+              </ul>
+            </div>
+            <!-- <div class="tabs">
               <ul class="clearfix">
                 <li>
                   <a
@@ -186,12 +202,12 @@
                   <a href="https://gitee.com/iGaoWei/big-data-view">当月</a>
                 </li>
               </ul>
-            </div>
-            <div class="clearfix">
+            </div> -->
+            <!-- <div class="clearfix">
               <div class="sy" id="echarts6"></div>
               <div class="sy" id="echarts7"></div>
               <div class="sy" id="echarts8"></div>
-            </div>
+            </div> -->
             <div class="addnew">
               <div class="tit02"><span>今日新增加盟商列表</span></div>
               <div class="adduser">
@@ -242,19 +258,19 @@
     <script type="text/javascript" src="js/chinaJSON.js"></script>
     <script type="text/javascript" src="js/chinaMap.js"></script>
     <script type="text/javascript" src="js/render.js"></script>
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
       $(document).ready(function () {
-        // myChart1.resize();
-        // myChart2.resize();
-        // myChart3.resize();
+        myChart1.resize();
+        myChart2.resize();
+        myChart3.resize();
         myChart6.resize();
         myChart7.resize();
         myChart8.resize();
       });
       window.addEventListener("resize", function () {
-        // myChart1.resize();
-        // myChart2.resize();
-        // myChart3.resize();
+        myChart1.resize();
+        myChart2.resize();
+        myChart3.resize();
         myChart6.resize();
         myChart7.resize();
         myChart8.resize();
@@ -433,7 +449,7 @@
         myChart8.setOption(option8);
       }, 500);
     </script>
-    <!-- <script type="text/javascript">
+    <script type="text/javascript">
       var myChart1 = echarts.init(document.getElementById("echarts1"));
       var v1 = 298; //男消费
       var v2 = 523; //女消费

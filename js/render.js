@@ -4,6 +4,9 @@
  */
 const renderChart = ({ data }) => {
   // 加盟商统计
+  $("#today_franchisee").text(data.today_franchisee);
+  $("#yesterday_franchisee").text(data.yesterday_franchisee);
+  $("#month_franchisee").text(data.month_franchisee);
 
   // 订单统计
   $("#order_count").text(data.order_count);
