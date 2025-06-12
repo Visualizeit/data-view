@@ -30,6 +30,8 @@ const renderChart = ({ data }) => {
       )
       .join()
   );
+
+  createChinaMapChart("china_map");
 };
 
 const initializeCharts = () => {
@@ -48,4 +50,6 @@ const initializeCharts = () => {
   }
 };
 
-initializeCharts();
+$(document).ready(() => {
+  initializeCharts();
+});
